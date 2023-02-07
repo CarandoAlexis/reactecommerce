@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+ul{
+  list-style-type: none; 
+}
+
+ul li{
+  float: left;
+  text-align: left;
+  display: inline;
+  margin-left: 60px;
+  margin-right: 90px;
+  padding: 10px 0;
+  border: none;
+  font-weight: bold;
+  position: relative;
+}
+
+ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+ul li a::before{
+  display: block;
+  content:'';
+  width: 0%;
+  background: rgb(112, 111, 160);
+  height: 5px;
+  top: 0;
+  position: absolute;
+  transition: width 1s;
+
+}
+
+ul li a:hover::before{
+  width: 100%;
+
+
+}

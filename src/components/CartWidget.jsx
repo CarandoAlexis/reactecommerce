@@ -7,7 +7,7 @@ const CartWidget = () => {
   return (
     <div>
         <button>
-            <Icon colorScheme='none' as={FaShoppingCart}/>
+            <Icon colorscheme='none' as={FaShoppingCart}/>
             <span>4</span>
         </button>
     </div>

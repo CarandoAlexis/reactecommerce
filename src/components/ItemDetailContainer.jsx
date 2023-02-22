@@ -1,11 +1,10 @@
 import React from 'react'
-import ItemList from './ItemList'
+import ItemDetail from './ItemDetail'
 import productos from '../data.json'
-import { useParams } from 'react-router-dom'
 
 
-const ItemListContanier = () => {
-  const { categoria } = useParams();
+
+const ItemDetailContanier = () => {
   console.log(productos)
   const getDatos = () => {
     return new Promise((resolve,reject) =>{
@@ -27,15 +26,12 @@ const ItemListContanier = () => {
     }
   }
   fetchingData();
-
-  
-  const catFilter = productos.filter((producto) => producto.categoria === categoria);
-
   return<>
-      {categoria ? <ItemList productos={catFilter} /> : <ItemList productos={productos} />}
+
+      <ItemDetail productos={productos}/>
   </>
 ;
 
 }
 
-export default ItemListContanier
+export default ItemDetailContanier;

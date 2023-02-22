@@ -1,0 +1,5 @@
+[
+    {"id": 1, "nombre": "Producto 1", "descripcion": "es un marcador", "precio": "$500", "stock": "3", "categoria": "marcador"},
+    {"id": 2, "nombre": "Producto 2", "descripcion": "es un cortante", "precio": "$300", "stock": "3", "categoria": "cortante"},
+    {"id": 3, "nombre": "Producto 3", "descripcion": "es un muñeco", "precio": "$800", "stock": "4", "categoria": "muñeco"}
+]

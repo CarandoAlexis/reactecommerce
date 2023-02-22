@@ -1,36 +1,46 @@
 import React from 'react';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return(
             <>
+            <header className="App-header">
                 <div className="navbar">
                     <ul className="navbar-nav">
                         <li className="logo">
-                            <a href="#" className="nav-link">
-                            <span className="link-text logo-text">Alexis Tienda</span>
-                            </a>
+                            <Link to="/"> 
+                                <button>Alexis Tienda</button>
+                            </Link>
                         </li>
-                        <li className="cortantes">
-                            <a href="#" className="nav-link">
-                            <span className="link-text">Cortantes y Marcadores</span>
-                            </a>
+                        <li className="catalogo">
+                            <Link to="/Catalogo"> 
+                                <button>Catalogo Completo</button>
+                            </Link>
                         </li>
-                        <li className="muñecos">
-                            <a href="#" className="nav-link">
-                            <span className="link-text">Muñecos</span>
-                            </a>
+                        <li className="cortante">
+                            <Link to={`/categoria/${"cortante"}`}> 
+                                <button>Cortantes</button>
+                            </Link>
                         </li>
-                        <li className="muñecos artis">
-                            <a href="#" className="nav-link">
-                            <span className="link-text">Muñecos Articulados</span>
-                            </a>
+                        <li className="marcador">
+                            <Link to={`/categoria/${"marcador"}`}> 
+                                <button>Marcadores</button>
+                            </Link>
+                        </li>
+                        <li className="muñeco">
+                            <Link to={`/categoria/${"muñeco"}`}> 
+                                <button>Muñecos</button>
+                            </Link>
                         </li>
                         <li>
-                            <CartWidget/>
+                            <Link to={"/cart"}>
+                                <CartWidget/>
+                            </Link>
                         </li>
                     </ul>
                 </div>
+            </header>
             </>
     )
 

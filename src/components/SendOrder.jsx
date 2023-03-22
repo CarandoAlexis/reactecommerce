@@ -1,7 +1,8 @@
 import {Container,Heading,Input,Button,Text,Center,FormControl,FormLabel,} from "@chakra-ui/react";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 import { useState } from "react";
-  
+import Swal from "sweetalert2";
+
   const SendOrder = () => {
     const [orderId, setOrderId] = useState(null);
     const [name, setName] = useState("");
@@ -10,7 +11,7 @@ import { useState } from "react";
     const handleSubmit = (e) => {
       e.preventDefault();
       if (name === "" || email === "") {
-        alert("No pueden existir campos vacios");
+        Swal.fire("Los campos no pueden estar vacios")
       } else {
         addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
       }
@@ -20,7 +21,7 @@ import { useState } from "react";
     const db = getFirestore();
     const ordersCollection = collection(db, "orden");
   
-    const order = {name,email,};
+    const order = {name,email};
   
     return (
       <div>
@@ -42,7 +43,7 @@ import { useState } from "react";
         </Container>
         <Center>
           <Text as="b" m={3} fontSize="xl">
-            Order ID:{" "}
+            ID de compra:{" "}
           </Text>
           <Text as="mark" fontSize="2xl">
             {orderId}

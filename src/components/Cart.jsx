@@ -18,7 +18,7 @@ const Cart = () => {
 
   const eliminarItem = (id) =>{
     Swal.fire({
-      title: 'Está seguro de eliminar todo el carrito?',
+      title: 'Está seguro de eliminar objeto del carrito?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Sí, seguro',
@@ -26,7 +26,7 @@ const Cart = () => {
     }).then((result) => {
     if (result.isConfirmed){
       Swal.fire({
-      title: 'Has vaciado el carrito!',
+      title: 'Has eliminado objeto el carrito!',
       icon: 'success',
     })
       const arr = cart.filter((item)=>item.id !== id);

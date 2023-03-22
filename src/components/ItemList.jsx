@@ -5,7 +5,7 @@ const ItemList = ({ productos }) => {
   return (
     <>
       <Container maxW="container.sm">
-        {productos.map((producto) => (
+        {productos?.map((producto) => (
           <Item
             key={producto.id}
             id={producto.id}
